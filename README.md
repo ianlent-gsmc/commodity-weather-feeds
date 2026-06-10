@@ -12,6 +12,7 @@ Published via GitHub Pages from `docs/`.
 | Feed | File | Signal | Source (keyless) |
 |---|---|---|---|
 | **Coffee VPD** | `docs/coffee_vpd.json` | Brazil arabica flowering-window (Sep15–Oct31) production-weighted vapor pressure deficit | NASA POWER daily T2M + dewpoint → FAO-56 VPD |
+| **Coffee frost** | `docs/coffee_frost.json` | Brazil arabica belt frost-risk nights (Jun-Aug, 2m min air temp) | NASA POWER daily T2M_MIN |
 | **Corn VHI** | `docs/corn_vhi.json` | US Corn Belt corn-area-weighted Vegetation Health Index | NOAA STAR Blended VHP 4km |
 
 Each feed's own README (`coffee_vpd/`, `corn_vhi/`) has the methodology, dose-response, and

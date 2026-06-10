@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-05T20:52:44.356955+00:00",
+  "generated_at_utc": "2026-06-10T20:05:20.204457+00:00",
   "source": "NOAA STAR Blended VHP 4km Weekly",
   "source_index_url": "https://www.star.nesdis.noaa.gov/pub/corp/scsb/wguo/data/Blended_VH_4km/VH/",
   "geography": "US Corn Belt \u2014 top-5 corn-producing states (Iowa, Illinois, Indiana, Nebraska, Minnesota) weighted by harvested-corn-area share",
@@ -30,9 +30,24 @@
         "year": 2026,
         "iso_week": 22,
         "weighted_vhi": 37.35
+      },
+      {
+        "year": 2026,
+        "iso_week": 21,
+        "weighted_vhi": 38.7
+      },
+      {
+        "year": 2026,
+        "iso_week": 20,
+        "weighted_vhi": 40.07
+      },
+      {
+        "year": 2026,
+        "iso_week": 19,
+        "weighted_vhi": 41.25
       }
     ],
-    "mean_weighted_vhi": 37.35
+    "mean_weighted_vhi": 39.34
   },
   "interpretation": {
     "vhi_scale": "0-100",

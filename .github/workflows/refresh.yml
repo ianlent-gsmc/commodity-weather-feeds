@@ -25,6 +25,11 @@ jobs:
           mkdir -p docs
           python coffee_vpd/aggregate_vpd.py docs/coffee_vpd.json
 
+      # Coffee frost feed — stdlib only, no deps.
+      - name: Coffee frost (NASA POWER)
+        run: |
+          python coffee_frost/aggregate_frost.py docs/coffee_frost.json
+
       # Corn VHI feed — needs NetCDF stack.
       - name: Install NetCDF deps for corn VHI
         run: |
