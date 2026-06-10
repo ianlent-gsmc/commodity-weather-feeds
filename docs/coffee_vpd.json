@@ -1,0 +1,88 @@
+{
+  "generated_at_utc": "2026-06-10T19:41:12.447870Z",
+  "source": "NASA POWER daily (T2M, T2MDEW) -> FAO-56 VPD",
+  "signal": "Brazil arabica flowering-window (Sep15-Oct31) production-weighted VPD",
+  "geography": "Brazil arabica belt: Sul de Minas, Cerrado Mineiro, Matas de Minas, Mogiana SP",
+  "method": {
+    "vpd": "es(T2M) - es(T2MDEW), FAO-56; daily then window-mean",
+    "weights": {
+      "sul_de_minas": 0.4,
+      "cerrado_mineiro": 0.22,
+      "matas_de_minas": 0.22,
+      "mogiana_sp": 0.16
+    },
+    "kath_threshold_kpa": 0.82,
+    "dose_pct_per_0p1_kpa": -4.0,
+    "baseline_years": "2001-2024"
+  },
+  "latest_window": {
+    "year": 2025,
+    "weighted_vpd_kpa": 1.423,
+    "exceeds_kath_threshold": true,
+    "anomaly_kpa": 0.239,
+    "anomaly_z": 0.91,
+    "implied_yield_dev_pct": -9.6
+  },
+  "climatology": {
+    "mean_vpd_kpa": 1.184,
+    "std_vpd_kpa": 0.263,
+    "n_years": 24
+  },
+  "per_region": {
+    "sul_de_minas": {
+      "name": "Sul de Minas (MG)",
+      "weight": 0.4,
+      "latest_window_vpd_kpa": 1.448,
+      "n_years": 25
+    },
+    "cerrado_mineiro": {
+      "name": "Cerrado Mineiro (MG)",
+      "weight": 0.22,
+      "latest_window_vpd_kpa": 1.718,
+      "n_years": 25
+    },
+    "matas_de_minas": {
+      "name": "Matas de Minas (MG)",
+      "weight": 0.22,
+      "latest_window_vpd_kpa": 0.893,
+      "n_years": 25
+    },
+    "mogiana_sp": {
+      "name": "Mogiana (SP)",
+      "weight": 0.16,
+      "latest_window_vpd_kpa": 1.682,
+      "n_years": 25
+    }
+  },
+  "history_weighted_vpd_kpa": {
+    "2001": 0.91,
+    "2002": 1.46,
+    "2003": 1.175,
+    "2004": 1.019,
+    "2005": 1.042,
+    "2006": 0.78,
+    "2007": 1.533,
+    "2008": 0.997,
+    "2009": 0.702,
+    "2010": 1.093,
+    "2011": 0.995,
+    "2012": 1.285,
+    "2013": 0.973,
+    "2014": 1.585,
+    "2015": 1.678,
+    "2016": 1.21,
+    "2017": 1.419,
+    "2018": 0.854,
+    "2019": 1.321,
+    "2020": 1.429,
+    "2021": 1.138,
+    "2022": 0.976,
+    "2023": 1.33,
+    "2024": 1.504,
+    "2025": 1.423
+  },
+  "interpretation": {
+    "scale": "kPa; higher = drier air = more flowering stress",
+    "note": "Mean-temp VPD (conservative). Daytime VPD via Tmax is a v2 refinement; absolute level lower than Kath's seasonal construction but internally consistent for the anomaly/z-score. Positive anomaly => yield-negative => KC-bullish."
+  }
+}

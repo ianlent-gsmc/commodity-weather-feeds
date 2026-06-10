@@ -1,0 +1,2 @@
+# No external dependencies — aggregate_vpd.py uses only the Python 3 standard
+# library (urllib, json, math, datetime). Runs on any python3.8+.

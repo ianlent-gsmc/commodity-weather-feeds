@@ -1,0 +1,45 @@
+{
+  "generated_at_utc": "2026-06-05T20:52:44.356955+00:00",
+  "source": "NOAA STAR Blended VHP 4km Weekly",
+  "source_index_url": "https://www.star.nesdis.noaa.gov/pub/corp/scsb/wguo/data/Blended_VH_4km/VH/",
+  "geography": "US Corn Belt \u2014 top-5 corn-producing states (Iowa, Illinois, Indiana, Nebraska, Minnesota) weighted by harvested-corn-area share",
+  "method": "For each state, extract VHI pixels from the NOAA Blended VHP 4km weekly NetCDF within the state bounding box, mean of valid VHI (0<vhi<=100) pixels. Then weight states by harvested-corn-area shares: {'iowa': 0.27, 'illinois': 0.24, 'nebraska': 0.17, 'minnesota': 0.16, 'indiana': 0.16}.",
+  "latest_week": {
+    "year": 2026,
+    "iso_week": 22,
+    "file_url": "https://www.star.nesdis.noaa.gov/pub/corp/scsb/wguo/data/Blended_VH_4km/VH/VHP.G04.C07.j01.P2026022.VH.nc",
+    "weighted_vhi": 37.35,
+    "per_state_vhi": {
+      "iowa": 31.91,
+      "illinois": 44.41,
+      "indiana": 49.39,
+      "nebraska": 30.31,
+      "minnesota": 31.37
+    },
+    "pixel_counts": {
+      "iowa": 14407,
+      "illinois": 15975,
+      "indiana": 9915,
+      "nebraska": 18341,
+      "minnesota": 30200
+    }
+  },
+  "trailing_4week": {
+    "weeks": [
+      {
+        "year": 2026,
+        "iso_week": 22,
+        "weighted_vhi": 37.35
+      }
+    ],
+    "mean_weighted_vhi": 37.35
+  },
+  "interpretation": {
+    "vhi_scale": "0-100",
+    "0-30": "severe stress / drought",
+    "30-40": "drought",
+    "40-60": "moderate",
+    "60-80": "favorable",
+    "above_80": "exceptional"
+  }
+}

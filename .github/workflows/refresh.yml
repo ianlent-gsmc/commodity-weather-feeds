@@ -1,0 +1,50 @@
+name: refresh-weather-feeds
+
+on:
+  schedule:
+    # Wednesdays 18:00 UTC (after NOAA STAR weekly VHP publication)
+    - cron: "0 18 * * 3"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Coffee VPD feed — stdlib only, no deps.
+      - name: Coffee VPD (NASA POWER)
+        run: |
+          mkdir -p docs
+          python coffee_vpd/aggregate_vpd.py docs/coffee_vpd.json
+
+      # Corn VHI feed — needs NetCDF stack.
+      - name: Install NetCDF deps for corn VHI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnetcdf-dev libhdf5-dev
+          python -m pip install --upgrade pip
+          pip install -r corn_vhi/requirements.txt
+
+      - name: Corn VHI (NOAA STAR VHP)
+        run: |
+          python corn_vhi/aggregate_vhi.py docs/corn_vhi.json || echo "corn VHI run failed; keeping prior docs/corn_vhi.json"
+
+      - name: Commit refreshed JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/coffee_vpd.json docs/corn_vhi.json
+          if git diff --cached --quiet; then
+            echo "No changes; skipping commit."
+          else
+            git commit -m "refresh weather feeds $(date -u +%Y-%m-%d)"
+            git push
+          fi
