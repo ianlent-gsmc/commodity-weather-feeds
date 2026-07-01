@@ -1,53 +1,53 @@
 {
-  "generated_at_utc": "2026-06-24T22:49:05.808666+00:00",
+  "generated_at_utc": "2026-07-01T22:48:42.887986+00:00",
   "source": "NOAA STAR Blended VHP 4km Weekly",
   "source_index_url": "https://www.star.nesdis.noaa.gov/pub/corp/scsb/wguo/data/Blended_VH_4km/VH/",
   "geography": "US Corn Belt \u2014 top-5 corn-producing states (Iowa, Illinois, Indiana, Nebraska, Minnesota) weighted by harvested-corn-area share",
   "method": "For each state, extract VHI pixels from the NOAA Blended VHP 4km weekly NetCDF within the state bounding box, mean of valid VHI (0<vhi<=100) pixels. Then weight states by harvested-corn-area shares: {'iowa': 0.27, 'illinois': 0.24, 'nebraska': 0.17, 'minnesota': 0.16, 'indiana': 0.16}.",
   "latest_week": {
     "year": 2026,
-    "iso_week": 24,
-    "file_url": "https://www.star.nesdis.noaa.gov/pub/corp/scsb/wguo/data/Blended_VH_4km/VH/VHP.G04.C07.j01.P2026024.VH.nc",
-    "weighted_vhi": 44.93,
+    "iso_week": 25,
+    "file_url": "https://www.star.nesdis.noaa.gov/pub/corp/scsb/wguo/data/Blended_VH_4km/VH/VHP.G04.C07.j01.P2026025.VH.nc",
+    "weighted_vhi": 53.75,
     "per_state_vhi": {
-      "iowa": 42.33,
-      "illinois": 51.28,
-      "indiana": 52.11,
-      "nebraska": 36.27,
-      "minnesota": 41.84
+      "iowa": 53.9,
+      "illinois": 59.61,
+      "indiana": 55.97,
+      "nebraska": 46.06,
+      "minnesota": 50.68
     },
     "pixel_counts": {
-      "iowa": 15004,
-      "illinois": 16472,
-      "indiana": 10003,
-      "nebraska": 18837,
-      "minnesota": 31111
+      "iowa": 15263,
+      "illinois": 16643,
+      "indiana": 10017,
+      "nebraska": 19553,
+      "minnesota": 31390
     }
   },
   "trailing_4week": {
     "weeks": [
       {
         "year": 2026,
+        "iso_week": 25,
+        "weighted_vhi": 53.75
+      },
+      {
+        "year": 2026,
         "iso_week": 24,
-        "weighted_vhi": 44.93
+        "weighted_vhi": 53.19
       },
       {
         "year": 2026,
         "iso_week": 23,
-        "weighted_vhi": 45.17
+        "weighted_vhi": 50.58
       },
       {
         "year": 2026,
         "iso_week": 22,
-        "weighted_vhi": 44.38
-      },
-      {
-        "year": 2026,
-        "iso_week": 21,
-        "weighted_vhi": 43.85
+        "weighted_vhi": 47.61
       }
     ],
-    "mean_weighted_vhi": 44.59
+    "mean_weighted_vhi": 51.28
   },
   "interpretation": {
     "vhi_scale": "0-100",
